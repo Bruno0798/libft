@@ -12,7 +12,7 @@ int ft_atoi(const char *str);
 /*
  * @brief Converts a string to an integer
  *
- * @param nptr The pointer of the string to convert
+ * @param str The pointer of the string to convert
  * @return int The integer converted from the string
  */
 
