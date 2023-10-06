@@ -51,6 +51,49 @@ OBJ_DIR			= bin
 
 NAME = libbc.a
 
-_FILES += strlen strlcpy strlcat strrchr strnstr strncmp strdup substr strjoin strtrim split
+_FILES += isalnum isalpha isascii isdigit isprint
 
-_FILES += 
+_FILES += atoi itoa tolower toupper
+
+_FILES += bzero calloc memchr memcmo memcpy memmove memset
+
+_FILES += putchar_fd putendl_fd putnbr_fd putstr_fd
+
+_FILES += split strchr strdup strteri strjoin strlcat strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
+
+OBJS = $(_FILES:%=ft_%.o)
+TARGET = $(addprefix $(OBJ_DIR)/, $(OBJS))
+
+#· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·#
+#·                                                                                           ·#
+#·                                         RULES                                             ·#
+#·                                                                                           ·#
+#· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·#
+
+all: $(NAME)
+
+$(NAME): $(OBJ_DIR) $(TARGET)
+		$(AR) $(NAME) $(TARGET)
+
+$(OBJ_DIR)/%.o	: $(SRCS)/%.c
+		$(CC) $(CFLAGS) -c $< -o $@ -I $(DEPS)
+
+$(OBJ_DIR) :
+		mkdir -p $(OBJ_DIR)
+
+clean:
+		$(RM) $(NAME)
+
+fclean: clean
+		$(RM) $(NAME)
+
+re: fclean
+	$(MAKE) all
+
+norm:
+		echo "\n\t$(BLUE)_/=\\_/=\\_/=\\_ *.h FILES _/=\\_/=\\_/=\\_$(RESET)\n"
+		norminette -R CheckDefine $(shell find . -type f -name "*.h")
+		echo "\n\t$(BLUE)_/=\\_/=\\_/=\\_ *.c FILES _/=\\_/=\\_/=\\_$(RESET)\n"
+		norminette -R checkForbiddenSourceHeader $(shell find . -type f -name "*.c")
+
+.SILENT:
