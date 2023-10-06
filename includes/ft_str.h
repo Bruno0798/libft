@@ -45,7 +45,7 @@ char *ft_strrchr(const char *str, int c);
  * does not appear in the string.
  */
 
-char *ft_strdup(const char *src);
+char *ft_strdup(char *src);
 /*
  * @brief Duplicates the string given in parameter
  *

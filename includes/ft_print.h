@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <limits>
+#include <limits.h>
 #include <unistd.h>
 #include <ctype.h>
 
