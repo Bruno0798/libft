@@ -52,17 +52,19 @@ OBJ_DIR			= bin
 #· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·#
 
 
-NAME	= libft.a
+NAME	= 	libft.a
 
-_FILES += isalnum isalpha isascii isdigit isprint
+_FILES += 	isalnum isalpha isascii isdigit isprint
 
-_FILES += atoi itoa tolower toupper
+_FILES += 	atoi itoa tolower toupper
 
-_FILES += bzero calloc memchr memcmp memcpy memmove memset
+_FILES += 	bzero calloc memchr memcmp memcpy memmove memset
 
-_FILES += putchar_fd putendl_fd putnbr_fd putstr_fd
+_FILES += 	print_char print_decimal print_hexadecimal print_percent print_pointer print_string \
+			print_unsigned_decimal printf putchar_fd putendl_fd putnbr_fd putstr_fd
 
-_FILES += split strchr strdup striteri strjoin strlcat strlcpy strlen strmapi strncmp strnstr strrchr strtrim substr
+_FILES += 	split strchr strdup striteri strjoin strlcat strlcpy strlen strmapi strncmp strnstr \
+			strrchr strtrim substr
 
 OBJS			= $(_FILES:%=ft_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))

@@ -1,12 +1,14 @@
 #ifndef FT_PRINT_H
-#define FT_PRINT_H
+# define FT_PRINT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <unistd.h>
-#include <ctype.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <limits.h>
+# include <unistd.h>
+# include <ctype.h>
+# include <stdint.h>
+# include <stdarg.h>
 
 void ft_putchar_fd(char c, int fd);
 /**
@@ -63,16 +65,8 @@ int ft_print_decimal(int c);
  */
 
 int ft_print_hexadecimal(unsigned int c, char casing);
-static void print_hexadecimal(unsigned int c, char casing);
-static int print_length(unsigned int c);
 /**
  * @brief Conversion and printing of unsigned integers as hexadecimal numbers.
- *
- * The functions in this module work together to convert and print an unsigned integer 'c'
- * as a hexadecimal number to the standard output. The `ft_print_hexadecimal` function serves
- * as the entry point, while `print_length` calculates the length of the hexadecimal representation,
- * and `print_hexadecimal` performs the recursive conversion and printing, allowing customization
- * of letter casing for hexadecimal digits ('a' for lowercase, 'A' for uppercase).
  *
  * @param c The unsigned integer to be printed as a hexadecimal number.
  * @param casing The casing style for hexadecimal digits ('a' for lowercase, 'A' for uppercase).
@@ -125,16 +119,7 @@ char *ft_itoa_long(unsigned int n);
  * @return A dynamically allocated string representation of 'n', or NULL on allocation failure
  */
 
-static unsigned int count(unsigned int n);
-/**
- * @brief Counts the number of digits in an unsigned integer 'n'.
- *
- * @param n The unsigned integer for which to count digits
- * @return The number of digits in 'n'
- */
-
 int ft_printf(const char *str, ...);
-static int ft_format(const char c, va_list ap);
 /**
  * @brief Prints formatted text to the standard output.
  *
