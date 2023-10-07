@@ -6,5 +6,6 @@
 #include "ft_memory.h"
 #include "ft_print.h"
 #include "ft_str.h"
+#include "ft_get_next_line.h"
 
 #endif
