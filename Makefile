@@ -41,7 +41,7 @@ MK		= --no-print-directory
 
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= checks convert memory print str get_next_line
+_SUBFOLDERS		= checks convert memory print str get_next_line linked_lists
 VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -67,6 +67,8 @@ _FILES += 	split strchr strdup striteri strjoin strlcat strlcpy strlen strmapi s
 			strrchr strtrim substr
 
 _FILES +=	get_next_line get_next_line_utils
+
+_FILES += lst_add_back lst_add_front lst_clear lst_delone lst_iter lst_last lst_map lst_new lst_size
 
 OBJS			= $(_FILES:%=ft_%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))

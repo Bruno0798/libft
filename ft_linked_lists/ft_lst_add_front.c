@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 12:12:32 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/10/14 17:04:55 by bsousa-d         ###   ########.fr       */
+/*   Created: 2023/10/11 14:43:32 by bsousa-d          #+#    #+#             */
+/*   Updated: 2023/10/11 14:43:33 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
 
-# include "ft_checks.h"
-# include "ft_convert.h"
-# include "ft_memory.h"
-# include "ft_print.h"
-# include "ft_str.h"
-# include "ft_get_next_line.h"
-# include "ft_linked_lists.h"
+#include "libft.h"
 
-#endif
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
+}
