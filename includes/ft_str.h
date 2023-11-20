@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:12:29 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/11 16:13:53 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/12 16:35:23 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ char *ft_strchr(const char *str, int c);
  * @param c The character to search for.
  * @return char* A pointer to the located character, or NULL if the character
  * does not appear in the string.
+ */
+
+int ft_strcmp(const char *s1, const char *s2);
+/**
+ * @brief Compares the string s1 against the string s2.
+ *
+ * @param s1 The first string to compare.
+ * @param s2 The second string to compare.
+ * @return int An integer greater than, equal to, or less than 0, according as
+ * the string s1 is greater than, equal to, or less than the string s2.
  */
 
 char *ft_strrchr(const char *str, int c);
@@ -173,16 +183,6 @@ char *ft_substr(char const *s, size_t start, size_t len);
  * @param len The maximum length of the substring.
  * @return char* The substring.
  * @return NULL If the allocation fails.
- */
-
-char *ft_strcmp(char *s1, char *s2);
-/**
- * @brief Compares the string s1 against the string s2.
- *
- * @param s1 The first string to compare.
- * @param s2 The second string to compare.
- * @return int An integer greater than, equal to, or less than 0, according as
- * the string s1 is greater than, equal to, or less than the string s2.
  */
 
 #endif

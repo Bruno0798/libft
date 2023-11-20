@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 12:12:32 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/18 10:42:23 by bsousa-d         ###   ########.fr       */
+/*   Created: 2023/11/12 16:31:02 by bsousa-d          #+#    #+#             */
+/*   Updated: 2023/11/12 16:34:54 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+int ft_strcmp(const char *s1, const char *s2)
+{
+	int i;
 
-#include "ft_checks.h"
-#include "ft_convert.h"
-#include "ft_memory.h"
-#include "ft_print.h"
-#include "ft_str.h"
-#include "ft_get_next_line.h"
-#include "ft_linked_lists.h"
-
-#endif
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
+			return (1);
+		if ((unsigned char)s1[i] < (unsigned char)s2[i])
+			return (-1);
+		i++;
+	}
+	return (0);
+}
