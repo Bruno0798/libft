@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:12:29 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/12 16:35:23 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:55:55 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 #include <unistd.h>
 #include <ctype.h>
 
-char **ft_split(char const *s, char c);
 /**
  * @brief Splits the string s using the character c as a delimiter.
  *
@@ -30,8 +29,8 @@ char **ft_split(char const *s, char c);
  * @return char** The array of new strings resulting from the split.
  * @return NULL If the allocation fails.
  */
+char **ft_split(char const *s, char c);
 
-char *ft_strchr(const char *str, int c);
 /**
  * @brief Attempts to locate the first occurrence of character c (converted to
  * a char) in the string pointed to by s. The terminating null character is
@@ -43,8 +42,8 @@ char *ft_strchr(const char *str, int c);
  * @return char* A pointer to the located character, or NULL if the character
  * does not appear in the string.
  */
+char *ft_strchr(const char *str, int c);
 
-int ft_strcmp(const char *s1, const char *s2);
 /**
  * @brief Compares the string s1 against the string s2.
  *
@@ -53,8 +52,8 @@ int ft_strcmp(const char *s1, const char *s2);
  * @return int An integer greater than, equal to, or less than 0, according as
  * the string s1 is greater than, equal to, or less than the string s2.
  */
+int ft_strcmp(const char *s1, const char *s2);
 
-char *ft_strrchr(const char *str, int c);
 /**
  * @brief Attempts to locate the last occurrence of character c (converted to a
  * char) in the string pointed to by s. The terminating null character is
@@ -66,6 +65,7 @@ char *ft_strrchr(const char *str, int c);
  * @return char* A pointer to the located character, or NULL if the character
  * does not appear in the string.
  */
+char *ft_strrchr(const char *str, int c);
 
 char *ft_strdup(char *src);
 /**
@@ -86,7 +86,6 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @param f The function to apply to each character.
  */
 
-char *ft_strjoin(char const *s1, char const *s2);
 /**
  * @brief Creates a new string, which is the result of the concatenation
  *  of s1 and s2.
@@ -96,8 +95,8 @@ char *ft_strjoin(char const *s1, char const *s2);
  * @return char* The new string.
  * @return NULL If the allocation fails.
  */
+char *ft_strjoin(char const *s1, char const *s2);
 
-size_t ft_strlcat(char *dest, const char *src, size_t size);
 /**
  * @brief Appends the NUL-terminated string src to the end of dst. It will append
  * at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
@@ -107,8 +106,8 @@ size_t ft_strlcat(char *dest, const char *src, size_t size);
  * @param size The size of the destination string.
  * @return size_t The total length of the string they tried to create.
  */
+size_t ft_strlcat(char *dest, const char *src, size_t size);
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
 /**
  * @brief Copies up to size - 1 characters from the NUL-terminated string src
  * to dst, NUL-terminating the result.
@@ -118,16 +117,16 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size);
  * @param size The size of the destination string .
  * @return size_t The total length of the string they tried to create.
  */
+size_t ft_strlcpy(char *dst, const char *src, size_t size);
 
-size_t ft_strlen(const char *str);
 /**
  * @brief Counts the number of characters in a string.
  *
  * @param str The string to count.
  * @return size_t The number of characters in the string.
  */
+size_t ft_strlen(const char *str);
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /**
  * @brief Creates a new string by applying the function f to each character
  * of the string s.
@@ -137,8 +136,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @return char* The new string.
  * @return NULL If the allocation fails.
  */
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
-int ft_strncmp(const char *s1, const char *s2, size_t n);
 /**
  * @brief Compares the first n characters of the null-terminated
  * strings s1 and s2.
@@ -149,8 +148,8 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
  * @return int An integer greater than, equal to, or less than 0, according as
  * the string s1 is greater than, equal to, or less than the string s2.
  */
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t n);
 /**
  * @brief Searches for the first occurrence of the substring needle in the
  * string haystack, where not more than len characters are searched.
@@ -161,8 +160,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t n);
  * @return char* A pointer to the beginning of the substring, or NULL if the
  * substring is not found.
  */
+char *ft_strnstr(const char *haystack, const char *needle, size_t n);
 
-char *ft_strtrim(char const *s1, char const *set);
 /**
  * @brief Creates a new string which is the result of trimming the original
  * string from the set of characters given in parameter.
@@ -172,8 +171,8 @@ char *ft_strtrim(char const *s1, char const *set);
  * @return char* The new string.
  * @return NULL If the allocation fails.
  */
+char *ft_strtrim(char const *s1, char const *set);
 
-char *ft_substr(char const *s, size_t start, size_t len);
 /**
  * @brief Returns a substring from the string s. The substring
  * begins at index 'start' and is of maximum size 'len'.
@@ -184,5 +183,6 @@ char *ft_substr(char const *s, size_t start, size_t len);
  * @return char* The substring.
  * @return NULL If the allocation fails.
  */
+char *ft_substr(char const *s, size_t start, size_t len);
 
 #endif

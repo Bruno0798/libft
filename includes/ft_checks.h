@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:12:16 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/17 04:47:10 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:50:37 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,28 +36,28 @@ int	ft_isalnum(int c);
  */
 int	ft_isalpha(int c);
 
-int	ft_isascii(int c);
-/*
+/**
  * @brief Checks if a character is on the ASCII table
  *
  * @param c The character to check
  * @return int 1 if the character is on the ASCII, 0 otherwise
  */
+int	ft_isascii(int c);
 
-int	ft_isdigit(int c);
-/*
+/**
  * @brief Checks if a character is a digit
  *
  * @param c The character to check
  * @return int 1 if the character is a digit, 0 otherwise
  */
+int	ft_isdigit(int c);
 
-int	ft_isprint(int c);
-/*
+/**
  * @brief Checks if a character is printable
  *
  * @param c The character to check
  * @return int 1 if the character is printable, 0 otherwise
  */
+int	ft_isprint(int c);
 
 #endif

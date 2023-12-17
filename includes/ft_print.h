@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:12:27 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/10/07 12:18:06 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:54:49 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdint.h>
 # include <stdarg.h>
 
-void	ft_putchar_fd(char c, int fd);
 /**
  * @brief
  * 		Outputs the character c to the file descriptor fd.
@@ -30,8 +29,8 @@ void	ft_putchar_fd(char c, int fd);
  * @param c The character to output
  * @param fd The file descriptor on which to write
  */
+void	ft_putchar_fd(char c, int fd);
 
-void	ft_putendl_fd(char *s, int fd);
 /**
  * @brief Outputs the string s to the file descriptor fd, followed by
  * a newline.
@@ -39,24 +38,24 @@ void	ft_putendl_fd(char *s, int fd);
  * @param s The string to output
  * @param fd The file descriptor on which to write
  */
+void	ft_putendl_fd(char *s, int fd);
 
-void	ft_putnbr_fd(int n, int fd);
 /**
  * @brief Outputs the integer n to the file descriptor fd.
  *
  * @param n The integer to output
  * @param fd The file descriptor on which to write
  */
+void	ft_putnbr_fd(int n, int fd);
 
-void	ft_putstr_fd(char *s, int fd);
 /**
  * @brief Outputs the string s to the file descriptor fd.
  *
  * @param s The string to output
  * @param fd The file descriptor on which to write
  */
+void	ft_putstr_fd(char *s, int fd);
 
-int		ft_print_char(int c);
 /**
  * @brief Prints a character to the standard output.
  *
@@ -64,8 +63,8 @@ int		ft_print_char(int c);
  * @return On success, the number of bytes written is returned (1).
  * On error, -1 is returned.
  */
+int		ft_print_char(int c);
 
-int		ft_print_decimal(int c);
 /**
  * @brief Prints an integer as a decimal number to the standard output.
  *
@@ -75,8 +74,8 @@ int		ft_print_decimal(int c);
  * 			(excluding the null terminator).
  *  	On error, -1 is returned.
  */
+int		ft_print_decimal(int c);
 
-int		ft_print_hexadecimal(unsigned int c, char casing);
 /**
  * @brief Conversion and printing of unsigned integers as hexadecimal numbers.
  *
@@ -88,8 +87,8 @@ int		ft_print_hexadecimal(unsigned int c, char casing);
  * 			terminator) is returned.
  *   	On error, -1 is returned.
  */
+int		ft_print_hexadecimal(unsigned int c, char casing);
 
-int		ft_print_percentage(void);
 /**
  * @brief Prints a percentage symbol ('%') to the standard output.
  *
@@ -97,8 +96,8 @@ int		ft_print_percentage(void);
  * 		On success, the number of characters written is returned (1).
  * 		On error, -1 is returned.
  */
+int		ft_print_percentage(void);
 
-int		ft_print_pointer(unsigned long c);
 /**
  * @brief Prints the hexadecimal representation of an unsigned long 'c'
  * as a pointer.
@@ -110,24 +109,24 @@ int		ft_print_pointer(unsigned long c);
  * @return The total number of characters printed, including the "0x" prefix
  * 			or "(nil)"
  */
+int		ft_print_pointer(unsigned long c);
 
-int		ft_print_string(char *s);
 /**
  * @brief Prints a null-terminated string to the standard output.
  *
  * @param s The null-terminated string to print
  * @return The number of characters printed (excluding the null terminator)
  */
+int		ft_print_string(char *s);
 
-int		ft_print_unsigned_decimal(unsigned int c);
 /**
  * @brief Prints an unsigned integer 'c' as a decimal number.
  *
  * @param c The unsigned integer to print as a decimal number
  * @return The number of characters printed (excluding the null terminator)
  */
+int		ft_print_unsigned_decimal(unsigned int c);
 
-char	*ft_itoa_long(unsigned int n);
 /**
  * @brief Converts an unsigned integer 'n' to a string representation.
  *
@@ -135,8 +134,8 @@ char	*ft_itoa_long(unsigned int n);
  * @return A dynamically allocated string representation of 'n', or NULL
  * on allocation failure
  */
+char	*ft_itoa_long(unsigned int n);
 
-int		ft_printf(const char *str, ...);
 /**
  * @brief Prints formatted text to the standard output.
  *
@@ -157,5 +156,6 @@ int		ft_printf(const char *str, ...);
  * @param ... Variable arguments list
  * @return The number of characters printed
  */
+int		ft_printf(const char *str, ...);
 
 #endif

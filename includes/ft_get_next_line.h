@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_next_line.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:01:00 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/10/07 12:21:22 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:51:44 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,14 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
 /**
  * @brief Reads the next line from a file descriptor 'fd'.
  *
  * @param fd The file descriptor from which to read the next line
  * @return The next line, or NULL if there are no more lines or an error occurs
  */
+char	*get_next_line(int fd);
 
-char	*ft_read_and_join(int fd, char *temp);
 /**
  * @brief Reads data from a file descriptor 'fd' and joins
  * it with the 'temp' buffer.
@@ -41,8 +40,8 @@ char	*ft_read_and_join(int fd, char *temp);
  * @param temp The current string to which data is appended
  * @return The joined string, or NULL on error or end of file
  */
+char	*ft_read_and_join(int fd, char *temp);
 
-char	*new_temp(char *temp);
 /**
  * @brief Creates a new 'temp' string by removing the first line from 'temp'.
  *
@@ -50,8 +49,8 @@ char	*new_temp(char *temp);
  * @return The new 'temp' string, or NULL if 'temp' is empty or doesn't contain
  *			a newline character
  */
+char	*new_temp(char *temp);
 
-char	*ft_get_line(char *temp);
 /**
  * @brief Extracts a line from a string 'temp'.
  *
@@ -59,8 +58,8 @@ char	*ft_get_line(char *temp);
  * @return The extracted line as a new string, or NULL on 
  * memory allocation failure
  */
+char	*ft_get_line(char *temp);
 
-char	*join(char *temp, char *buffer);
 /**
  * @brief Joins two strings 'temp' and 'buffer' together.
  *
@@ -68,8 +67,8 @@ char	*join(char *temp, char *buffer);
  * @param buffer The second string to append to 'temp'
  * @return The concatenated string, or NULL on memory allocation failure
  */
+char	*join(char *temp, char *buffer);
 
-char	*ft_get_char(char *str, char fetch);
 /**
  * @brief Searches for a character 'fetch' in a string 'str'.
  *
@@ -78,5 +77,6 @@ char	*ft_get_char(char *str, char fetch);
  * @return A pointer to the first occurrence of 'fetch', or NULL
  * if not found or 'str' is NULL
  */
+char	*ft_get_char(char *str, char fetch);
 
 #endif
