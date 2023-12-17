@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:12:16 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/17 04:42:43 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/17 04:47:10 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@
  */
 int	ft_isalnum(int c);
 
-int	ft_isalpha(int c);
-/*
+/**
  * @brief Checks if a character is alphabetic
  *
  * @param c The character to check
  * @return int 1 if the character is alphabetic, 0 otherwise
  */
+int	ft_isalpha(int c);
 
 int	ft_isascii(int c);
 /*
