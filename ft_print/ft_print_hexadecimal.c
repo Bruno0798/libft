@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 14:40:25 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/10/07 11:07:04 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:30:39 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ static int	print_lenght(unsigned int c)
 
 static void	print_hexadecimal(unsigned int c, char casing)
 {
-	if (c < 0)
+/* 	if (c < 0)
 	{
 		ft_putchar_fd('-', 1);
 		c = -c;
-	}
-	else if (c >= 16)
+	} */
+	if (c >= 16)
 	{
 		print_hexadecimal(c / 16, casing);
 		print_hexadecimal(c % 16, casing);
