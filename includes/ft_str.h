@@ -67,7 +67,6 @@ int ft_strcmp(const char *s1, const char *s2);
  */
 char *ft_strrchr(const char *str, int c);
 
-char *ft_strdup(char *src);
 /**
  * @brief Duplicates the string given in parameter
  *
@@ -75,8 +74,8 @@ char *ft_strdup(char *src);
  * @return char* A pointer to the new string
  * @return NULL If the allocation fails
  */
+char *ft_strdup(char *src);
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *));
 /**
  * @brief Applies the function f to each character of the string passed as
  * argument. Each character is passed by address to f to be modified if
@@ -85,6 +84,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @param s The string to iterate.
  * @param f The function to apply to each character.
  */
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /**
  * @brief Creates a new string, which is the result of the concatenation
