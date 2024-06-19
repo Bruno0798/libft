@@ -41,7 +41,7 @@ MK		= --no-print-directory
 
 DEPS			= includes 
 SRCS			= .
-_SUBFOLDERS		= checks convert memory print str get_next_line linked_lists
+_SUBFOLDERS		= checks convert memory print str get_next_line linked_lists fprintf
 VPATH			= srcs $(addprefix $(SRCS)/ft_, $(_SUBFOLDERS))
 OBJ_DIR			= bin
 
@@ -62,6 +62,8 @@ _FILES += 	bzero calloc memchr memcmp memcpy memmove memset
 
 _FILES += 	print_char print_decimal print_hexadecimal print_percent print_pointer print_string \
 			print_unsigned_decimal printf putchar_fd putendl_fd putnbr_fd putstr_fd
+
+_FILES +=	fprintf fprinthexa fprinthexa_upp fprintpointer fput_unsi_nbr fputchar fputnbr fputstr
 
 _FILES += 	split strchr strcmp strdup striteri strjoin strlcat strlcpy strlen strmapi strncmp strnstr \
 			strrchr strtrim substr

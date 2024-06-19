@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_fprinthexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 12:12:32 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/17 04:59:00 by bsousa-d         ###   ########.fr       */
+/*   Created: 2024/06/19 12:54:14 by bsousa-d          #+#    #+#             */
+/*   Updated: 2024/06/19 12:55:29 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include "ft_checks.h"
-#include "ft_convert.h"
-#include "ft_memory.h"
-#include "ft_print.h"
-#include "ft_str.h"
-#include "ft_get_next_line.h"
-#include "ft_linked_lists.h"
-#include "ft_fprintf.h"
+static int	len(unsigned int num)
+{
+	int	i;
 
-#endif
+	i = 0;
+	if (num == 0)
+		i++;
+	while (num != 0)
+	{
+		num = num / 16;
+		i++;
+	}
+	return (i);
+}
+
+int	ft_fprinthexa(unsigned int nbr, int fd)
+{
+	char	*hexa;
+
+	hexa = "0123456789abcdef";
+	if (nbr < 16)
+		ft_fputchar(*(hexa + nbr), fd);
+	else
+	{
+		ft_fprinthexa(nbr / 16, fd);
+		ft_fprinthexa(nbr % 16, fd);
+	}
+	return (len(nbr));
+}

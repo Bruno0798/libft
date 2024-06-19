@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_fputchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 12:12:32 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/17 04:59:00 by bsousa-d         ###   ########.fr       */
+/*   Created: 2024/06/19 12:54:14 by bsousa-d          #+#    #+#             */
+/*   Updated: 2024/06/19 12:55:50 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
 
-#include "ft_checks.h"
-#include "ft_convert.h"
-#include "ft_memory.h"
-#include "ft_print.h"
-#include "ft_str.h"
-#include "ft_get_next_line.h"
-#include "ft_linked_lists.h"
-#include "ft_fprintf.h"
+#include "libft.h"
 
-#endif
+int	ft_fputchar(char c, int fd)
+{
+	write(fd, &c, 1);
+	return (1);
+}
