@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hexadecimal.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 14:40:25 by bsousa-d          #+#    #+#             */
-/*   Updated: 2024/01/03 16:30:39 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:19:56 by brpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,6 @@ static int	print_lenght(unsigned int c)
 
 static void	print_hexadecimal(unsigned int c, char casing)
 {
-/* 	if (c < 0)
-	{
-		ft_putchar_fd('-', 1);
-		c = -c;
-	} */
 	if (c >= 16)
 	{
 		print_hexadecimal(c / 16, casing);

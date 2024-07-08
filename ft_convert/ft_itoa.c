@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 16:55:43 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/12 16:15:17 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:21:48 by brpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static long int count(long int n)
+static long int	count(long int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n == 0)
@@ -34,17 +34,17 @@ static long int count(long int n)
 	return (count);
 }
 
-static char *if_zero(char *str)
+static char	*if_zero(char *str)
 {
 	str[0] = '0';
 	return (str);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int num;
-	char *c;
-	long int nb;
+	int			num;
+	char		*c;
+	long int	nb;
 
 	nb = n;
 	num = count(nb);

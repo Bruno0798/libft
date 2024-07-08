@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fprintf.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 13:00:35 by bsousa-d          #+#    #+#             */
-/*   Updated: 2024/06/19 13:00:39 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:13:13 by brpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_FPRINT_H
-# define FT_FPRINT_H
+#ifndef FT_FPRINTF_H
+# define FT_FPRINTF_H
 
 # include <stdio.h>
 # include <stdlib.h>

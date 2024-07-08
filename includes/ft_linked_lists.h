@@ -3,24 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_linked_lists.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:59:39 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/17 04:53:36 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:14:33 by brpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LINKED_LISTS_H
-#define FT_LINKED_LISTS_H
+# define FT_LINKED_LISTS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <unistd.h>
-#include <ctype.h>
-#include <stddef.h>
-
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <limits.h>
+# include <unistd.h>
+# include <ctype.h>
+# include <stddef.h>
 
 /**
  * @brief A linked list node.
@@ -30,10 +29,9 @@
  */
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
-
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /**
  * @brief Adds a new element to the end of a linked list.
@@ -41,7 +39,7 @@ typedef struct s_list
  * @param lst A pointer to a pointer to the linked list
  * @param new The new element to add to the end of the list
  */
-void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
  * @brief Adds a new element to the front of a linked list.
@@ -49,7 +47,7 @@ void ft_lstadd_back(t_list **lst, t_list *new);
  * @param lst A pointer to a pointer to the linked list
  * @param new The new element to add to the front of the list
  */
-void ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * @brief Deletes all the nodes of the list.
@@ -57,7 +55,7 @@ void ft_lstadd_front(t_list **lst, t_list *new);
  * @param lst A pointer to the first node of the list
  * @param del The function pointer to apply to each node
  */
-void ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 /**
  * @brief Deletes a single element from a linked list and frees
@@ -66,7 +64,7 @@ void ft_lstclear(t_list **lst, void (*del)(void *));
  * @param lst The element to be deleted
  * @param del The function pointer to apply to each node
  */
-void ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /**
  * @brief Iterates over a linked list and applies a
@@ -75,7 +73,7 @@ void ft_lstdelone(t_list *lst, void (*del)(void *));
  * @param lst The linked list to iterate over
  * @param f The function pointer to apply to each node
  */
-void ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @brief Returns a pointer to the last element of a linked list.
@@ -83,7 +81,7 @@ void ft_lstiter(t_list *lst, void (*f)(void *));
  * @param lst The linked list to find the last element in
  * @return A pointer to the last element, or NULL if 'lst' is empty
  */
-t_list *ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 /**
  * @brief Applies a function 'f' to each element in a linked list
@@ -95,7 +93,7 @@ t_list *ft_lstlast(t_list *lst);
  * @return A new linked list with elements transformed by 'f',
  * 		or NULL on failure
  */
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /**
  * @brief Creates a new linked list element with the provided content.
@@ -104,7 +102,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
  * @return A pointer to the new linked list element, or NULL on memory
  * 		allocation failure
  */
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 
 /**
  * @brief Returns the number of elements in a linked list.
@@ -113,5 +111,5 @@ t_list *ft_lstnew(void *content);
  * @return The number of elements in the linked list,
  * 		or 0 if 'lst' is empty
  */
-int ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 #endif

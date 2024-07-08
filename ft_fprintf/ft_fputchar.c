@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fputchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 12:54:14 by bsousa-d          #+#    #+#             */
-/*   Updated: 2024/06/19 12:55:50 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:20:37 by brpereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
