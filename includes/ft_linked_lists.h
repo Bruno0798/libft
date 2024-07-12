@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_linked_lists.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brpereir <brpereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bruno <bruno@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:59:39 by bsousa-d          #+#    #+#             */
-/*   Updated: 2024/07/08 16:14:33 by brpereir         ###   ########.fr       */
+/*   Updated: 2024/07/12 07:27:46 by bruno            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}		t_list;
 
 /**
  * @brief Adds a new element to the end of a linked list.
